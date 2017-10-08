@@ -69,10 +69,6 @@ exports.default = function (_ref) {
       _ref$dataPath = _ref.dataPath,
       dataPath = _ref$dataPath === undefined ? './temp' : _ref$dataPath,
       contextualizers = _ref.contextualizers,
-      _ref$bodyCitationStyl = _ref.bodyCitationStyle,
-      bodyCitationStyle = _ref$bodyCitationStyl === undefined ? 'citation-apa' : _ref$bodyCitationStyl,
-      _ref$bodyCitationLoca = _ref.bodyCitationLocale,
-      bodyCitationLocale = _ref$bodyCitationLoca === undefined ? 'fr-FR' : _ref$bodyCitationLoca,
       _ref$cssStyle = _ref.cssStyle,
       cssStyle = _ref$cssStyle === undefined ? '' : _ref$cssStyle,
       fontUrl = _ref.fontUrl,
@@ -154,7 +150,6 @@ exports.default = function (_ref) {
   } else if (ordering === 'reverse') {
     blocks = reverse(blocks);
   }
-  blocks = blocks.slice(0, 5);
   var bar = new _progress2.default('rendering :bar :percent  :current/:total', { total: blocks.length });
 
   var citations = (0, _peritextRenderingUtils.buildCitations)(story);

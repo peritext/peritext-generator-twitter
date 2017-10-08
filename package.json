@@ -5,13 +5,19 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist; mkdir dist; babel src --out-dir  dist",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "adddist": "git add dist"
   },
+  "precommit": [
+    "build",
+    "adddist"
+  ],
   "author": "Robin de Mourat",
   "dependencies": {
     "array-shuffle": "^1.0.1",
     "async": "^2.5.0",
     "peritext-rendering-utils": "0.0.15",
+    "precommit": "^1.2.2",
     "progress": "^2.0.0",
     "react": "^15.6.1",
     "react-citeproc": "^0.1.7",
