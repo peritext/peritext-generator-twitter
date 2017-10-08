@@ -1,10 +1,11 @@
 {
   "name": "peritext-generator-twitter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "peritext pdf twitter fragments generator",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist; mkdir dist; babel src --out-dir  dist"
+    "build": "rm -rf dist; mkdir dist; babel src --out-dir  dist",
+    "prepublish": "npm run build"
   },
   "author": "Robin de Mourat",
   "dependencies": {
