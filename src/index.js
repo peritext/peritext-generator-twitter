@@ -88,7 +88,6 @@ export default ({
   } else if (ordering === 'reverse') {
     blocks = reverse(blocks);
   }
-  blocks = blocks.slice(0, 5);
   const bar = new ProgressBar('rendering :bar :percent  :current/:total', { total: blocks.length });
 
   const citations = buildCitations(story);
