@@ -44,9 +44,9 @@ var _html2plaintext = require('html2plaintext');
 
 var _html2plaintext2 = _interopRequireDefault(_html2plaintext);
 
-var _typographicBase = require('typographic-base');
+var _peritextTypography = require('peritext-typography');
 
-var _typographicBase2 = _interopRequireDefault(_typographicBase);
+var _peritextTypography2 = _interopRequireDefault(_peritextTypography);
 
 var _Renderer = require('./components/Renderer');
 
@@ -133,7 +133,7 @@ exports.default = function (_ref) {
         } else return false;
     }).map(function (block) {
       return (0, _extends3.default)({}, block, {
-        text: (0, _typographicBase2.default)(block.text, { locale: locale }) // tp.execute(block.text)
+        text: (0, _peritextTypography2.default)(block.text, { locale: locale }) // tp.execute(block.text)
       });
     }).map(function (block) {
       return {
