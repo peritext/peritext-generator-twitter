@@ -1,6 +1,6 @@
 {
   "name": "peritext-generator-twitter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "peritext pdf twitter fragments generator",
   "main": "dist/index.js",
   "scripts": {
@@ -17,13 +17,13 @@
     "array-shuffle": "^1.0.1",
     "async": "^2.5.0",
     "peritext-rendering-utils": "0.0.15",
+    "peritext-typography": "git+https://github.com/peritext/typographic-base.git",
     "precommit": "^1.2.2",
     "progress": "^2.0.0",
     "react": "^15.6.1",
     "react-citeproc": "^0.1.7",
     "react-dom": "^15.6.1",
     "redraft": "^0.8.0",
-    "typographic-base": "^1.0.4",
     "uuid": "^3.1.0",
     "webshot": "^0.18.0"
   },

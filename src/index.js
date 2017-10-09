@@ -7,7 +7,7 @@ import {v4 as id} from 'uuid';
 import {writeFileSync} from 'fs';
 import ProgressBar from 'progress';
 import h2p from 'html2plaintext';
-import typographicBase from 'typographic-base';
+import typographicBase from 'peritext-typography';
 
 import Renderer from './components/Renderer';
 import writeImages from './writeImages';
