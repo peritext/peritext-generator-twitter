@@ -44,10 +44,6 @@ var _html2plaintext = require('html2plaintext');
 
 var _html2plaintext2 = _interopRequireDefault(_html2plaintext);
 
-var _peritextTypography = require('peritext-typography');
-
-var _peritextTypography2 = _interopRequireDefault(_peritextTypography);
-
 var _Renderer = require('./components/Renderer');
 
 var _Renderer2 = _interopRequireDefault(_Renderer);
@@ -131,11 +127,14 @@ exports.default = function (_ref) {
           }
           return true;
         } else return false;
-    }).map(function (block) {
-      return (0, _extends3.default)({}, block, {
-        text: (0, _peritextTypography2.default)(block.text, { locale: locale }) // tp.execute(block.text)
-      });
-    }).map(function (block) {
+    })
+    // @todo: reput typography improvement
+    // but with a way that does not mess up with entities indexes
+    // .map(block => ({
+    //   ...block,
+    //   text: typographicBase(block.text, {locale})// tp.execute(block.text)
+    // }))
+    .map(function (block) {
       return {
         blocks: [block],
         entityMap: story.sections[sectionId].contents.entityMap,
@@ -278,3 +277,4 @@ exports.default = function (_ref) {
     return callback(err, blocks);
   });
 };
+// import typographicBase from 'peritext-typography';
