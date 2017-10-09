@@ -7,7 +7,7 @@ import {v4 as id} from 'uuid';
 import {writeFileSync} from 'fs';
 import ProgressBar from 'progress';
 import h2p from 'html2plaintext';
-import typographicBase from 'peritext-typography';
+// import typographicBase from 'peritext-typography';
 
 import Renderer from './components/Renderer';
 import writeImages from './writeImages';
@@ -70,10 +70,12 @@ export default ({
             return true;
           } else return false;
         })
-        .map(block => ({
-          ...block,
-          text: typographicBase(block.text, {locale})// tp.execute(block.text)
-        }))
+        // @todo: reput typography improvement
+        // but with a way that does not mess up with entities indexes
+        // .map(block => ({
+        //   ...block,
+        //   text: typographicBase(block.text, {locale})// tp.execute(block.text)
+        // }))
         .map(block => ({
           blocks: [block],
           entityMap: story.sections[sectionId].contents.entityMap,

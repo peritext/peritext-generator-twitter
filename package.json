@@ -1,6 +1,6 @@
 {
   "name": "peritext-generator-twitter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "peritext pdf twitter fragments generator",
   "main": "dist/index.js",
   "scripts": {
